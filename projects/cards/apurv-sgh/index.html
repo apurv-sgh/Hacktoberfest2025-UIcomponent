@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* -----------------------
+           GLOBAL STYLES & BACKGROUND
+           ----------------------- */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff; /* White text for contrast */
+            background: linear-gradient(135deg, #1f016d, #8d4fbf, #1d976c);
+            background-size: 300% 300%;
+            animation: gradient-animation 10s ease infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* -----------------------
+           GLASSMORPHISM CARD STYLES
+           ----------------------- */
+        .glass-card {
+            width: 350px;
+            padding: 30px;
+            border-radius: 15px;
+            
+            /* Core Glassmorphism properties */
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+            backdrop-filter: blur(10px);        /* The key blur effect */
+            -webkit-backdrop-filter: blur(10px); /* Safari support */
+            
+            /* Border and Shadow effects */
+            border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Strong shadow for lift */
+            
+            /* Optional: subtle 3D effect on hover */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .glass-card:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45);
+        }
+
+        /* -----------------------
+           CARD CONTENT STYLES
+           ----------------------- */
+        .card-icon {
+            font-size: 4em;
+            margin-bottom: 10px;
+            color: #69f0ae; /* Accent color */
+            text-shadow: 0 0 10px rgba(105, 240, 174, 0.5);
+        }
+
+        .card-title {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-text {
+            font-size: 1em;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .card-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.3); /* Slightly solid button background */
+            border: none;
+            border-radius: 8px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            backdrop-filter: blur(5px); /* Apply blur to the button too */
+        }
+
+        .card-button:hover {
+            background: rgba(255, 255, 255, 0.5); /* Lighter on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glass-card">
+        <div class="card-icon">✨</div> 
+        
+        <h2 class="card-title">Glass Effect Design</h2>
+        
+        <p class="card-text">
+            This card beautifully showcases the Glassmorphism trend using a blurred background and transparent white overlay, making the vibrant background visible yet frosted.
+        </p>
+        
+        <a href="#" class="card-button">Learn More</a>
+    </div>
+
+</body>
+</html>
